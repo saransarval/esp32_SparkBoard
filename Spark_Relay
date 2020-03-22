@@ -1,0 +1,30 @@
+// We assigned a name Relay_pin to pin number 0
+const int Relay_pin = 0;   // Relay pin D0
+// this will assign the name PushButton to pin numer 15
+const int Push_Button = 15;
+// This Setup function is used to initialize everything 
+void setup()
+{
+// This statement will declare pin 0 as digital output 
+pinMode(Relay_pin, OUTPUT);
+// This statement will declare pin 15 as digital input 
+pinMode(Push_Button, INPUT);
+}
+
+void loop()
+
+{
+// digitalRead function stores the Push button state 
+// in variable push_button_state
+int Push_button_state = digitalRead(Push_Button);
+// if condition checks if push button is pressed
+// if pressed Relay will turn on otherwise remain off 
+if ( Push_button_state == HIGH )
+{ 
+digitalWrite(Relay_pin, HIGH); 
+}
+else 
+{
+digitalWrite(Relay_pin, LOW); 
+}
+}
