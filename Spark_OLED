@@ -1,0 +1,16 @@
+// 1.install the OLED  library through library manager   Adafruit_SSD1306 library or use https://github.com/adafruit/Adafruit_SSD1306
+// 2. install Adafruit_GFX library or use https://github.com/adafruit/Adafruit-GFX-Library
+
+#include <Wire.h>
+#include "SSD1306.h" 
+ 
+SSD1306  display(0x3c, 21, 22);  //(address,gpio21-SDA,gpio22-SCL)
+ 
+void setup() {
+ 
+  display.init();
+  display.drawString(0, 0, "Hello World");  //(x co-ordinate, y co-ordinate, string to be display)
+  display.display();
+}
+ 
+void loop() {}
